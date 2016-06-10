@@ -22,7 +22,7 @@ celery_cmd="source $VENV_DIR/bin/activate; builtin cd $SRC_DIR; celery worker -B
 set -x
 if [[ $USER == $user ]]; then
 	rm -f $SRC_DIR/celerybeat-schedule
-	"$celery_cmd"
+	bash -c "$celery_cmd"
 else
 	sudo rm -f $SRC_DIR/celerybeat-schedule
 	sudo -u $user bash -c "$celery_cmd"

@@ -34,17 +34,17 @@ source "$VENV_DIR/bin/activate"
 ##########################################
 # Below here is local to the virtualenv
 
-echo "Installing pip 1.5 locally..."
+echo "Installing pip 8.1 locally..."
 mkdir -p opt/pip
 cd opt/pip
-wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py -O get-pip.py
+wget https://bootstrap.pypa.io/get-pip.py -O get-pip.py
 python get-pip.py
-pip install 'pip>=1.5,<1.6'
+pip install 'pip>=8.1,<8.2'
 cd "$REPO_DIR"
 
 echo "Installing setup packages (locally)..."
-pip install --upgrade setuptools
-pip install --upgrade distribute
+# pip install --upgrade setuptools
+# pip install --upgrade distribute
 pip install --upgrade versiontools
 
 _install_python_packages() {

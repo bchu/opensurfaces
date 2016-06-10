@@ -44,6 +44,7 @@ python
 python-dev
 python-pip
 python-setuptools
+python-software-properties
 python-virtualenv
 rabbitmq-server
 supervisor

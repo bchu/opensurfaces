@@ -124,7 +124,7 @@ echo "Destroying any existing database with name '$DB_NAME'"
 set +e # this will complain if run a second time, so ignore the error
 dropdb -p $DB_PORT $DB_NAME
 set -e
-createdb -p $DB_PORT --owner=$DB_USER --encoding=UTF8 $DB_NAME
+createdb -p $DB_PORT --owner=$DB_USER --encoding=UTF8 $DB_NAME --locale=en_US.UTF-8
 
 # set up hba conf
 HBA_CONF=$(sudo ls -1 /etc/postgresql/$PSQL_VERSION/$DB_CLUSTER/pg_hba.conf | tail -n 1)
