@@ -14,9 +14,8 @@ sudo apt-get install -y tmux bc git
 
 git clone https://github.com/bchu/opensurfaces.git app
 
-echo -e 'cd /home/vagrant/app\n' > /home/vagrant/.bash_profile
+echo -e 'cd /home/vagrant/app\nexport PATH=/usr/local/bin:$PATH\n' > /home/vagrant/.bash_profile
 
 git clone https://github.com/CGAL/cgal.git
 cd cgal
 git checkout 8a0731835eab10a7b717fa8714d462bc2e7558e8 # version 4.6.3
-
