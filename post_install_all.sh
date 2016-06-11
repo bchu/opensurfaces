@@ -4,3 +4,4 @@ cmake .
 make
 sudo make install
 cd /home/vagrant/app/triangulate; ./build.sh
+pip install jupyter
